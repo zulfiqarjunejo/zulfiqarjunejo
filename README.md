@@ -3,11 +3,11 @@
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### About
 
--  **Tech Stack :** Java, Kotlin, Go, Python, Node.JS
+-  **Tech Stack :** Java, Kotlin, Go, Python, JavaScript, Node.JS
 -  **Learning :** Full-Stack Development :zap: | Open-Source :fire:	
 -  **Hobbies :** Articles & Music :headphones:
 -  **Fact :** First solve the problem, then write the code :heart: 
--  **Organization :** Vaira UG
+-  **Organization :** EGEOS GmBH
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
