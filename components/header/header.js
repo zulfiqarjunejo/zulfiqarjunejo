@@ -7,7 +7,7 @@ import styles from "./header.module.css";
 export default function Header() {
   return (
     <>
-      <header className="bg-transparent fixed flex justify-between inset-x-0">
+      <header className="bg-transparent flex justify-between inset-x-0">
         <div className={styles.headerContainer}>
           <div className={styles.logo}>
             <Link href="/">

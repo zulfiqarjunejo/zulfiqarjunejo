@@ -14,10 +14,7 @@ export default function Layout({ children, home }) {
       <div className="container mx-auto">
         <Head>
           <link rel="icon" href="/favicon.ico" />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap"
-            rel="stylesheet"
-          />
+          <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
           <meta
             name="description"
             content="Learn how to build a personal website using Next.js"
@@ -33,7 +30,7 @@ export default function Layout({ children, home }) {
         </Head>
 
         <Header></Header>
-        <section className={styles.article}>{children}</section>
+        <section className={styles.content}>{children}</section>
 
         {!home && (
           <div className={styles.backToHome}>

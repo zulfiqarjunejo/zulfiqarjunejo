@@ -1,5 +1,5 @@
 .appLayout {
-  font-family: "Merriweather Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .container {
@@ -14,8 +14,10 @@
   align-items: center;
 }
 
-.article {
-  padding-top: 65px;
+.content {
+  padding-top: 30px;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .backToHome {
