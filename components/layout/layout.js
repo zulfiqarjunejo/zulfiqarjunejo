@@ -1,5 +1,5 @@
 import Head from "next/head";
-import styles from "./layout.module.css";
+import styles from "./layout.module.scss";
 import Link from "next/link";
 
 import Header from "../header/header";
@@ -14,7 +14,10 @@ export default function Layout({ children, home }) {
       <div className="container mx-auto">
         <Head>
           <link rel="icon" href="/favicon.ico" />
-          <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
+            rel="stylesheet"
+          />
           <meta
             name="description"
             content="Learn how to build a personal website using Next.js"

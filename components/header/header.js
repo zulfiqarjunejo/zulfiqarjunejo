@@ -2,12 +2,12 @@ import Link from "next/link";
 import Head from "next/head";
 
 import { firstName, lastName } from "../layout/layout";
-import styles from "./header.module.css";
+import styles from "./header.module.scss";
 
 export default function Header() {
   return (
     <>
-      <header className="bg-transparent flex justify-between inset-x-0">
+      <header className={styles.mainHeader}>
         <div className={styles.headerContainer}>
           <div className={styles.logo}>
             <Link href="/">

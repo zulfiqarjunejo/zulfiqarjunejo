@@ -29,7 +29,7 @@ const Blog = ({ allExperiences }) => {
           <div className={styles.blog__image}>
             <Link href="/blog/1">
               <Image
-                src={"/images/outside_blog_post.jpeg"}
+                src={"/images/rional_messi.jpg"}
                 width={400}
                 height={400}
               ></Image>
