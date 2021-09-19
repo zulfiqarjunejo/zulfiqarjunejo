@@ -56,11 +56,26 @@
     .blog__experience {
       display: flex;
       margin-bottom: 15px;
+
+      @media (max-width: 560px) {
+        display: block;
+        margin-bottom: 0;
+        margin-top: 15px;
+
+        > p {
+          margin-left: 0 !important;
+          margin: 0;
+          margin-bottom: 5px;
+          font-size: 0.8em;
+        }
+      }
+
       > p {
         border: 1px solid #ececee;
         padding: 3px 10px;
         background-color: #707070;
         color: #fff;
+        max-width: fit-content;
         + p {
           margin-left: 15px;
         }
