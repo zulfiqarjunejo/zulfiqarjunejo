@@ -1,14 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
+import Moment from "react-moment";
 
 import Layout from "../components/layout/layout";
 import { getAll } from "../services/blog.service";
 import styles from "./blog.module.scss";
+import { getStrapiMedia } from "../lib/media";
 
 export async function getServerSideProps(context) {
-  const allExperiences = await getAll();
+  const all = await getAll();
 
-  if (!allExperiences) {
+  if (!all) {
     return {
       notFound: true,
     };
@@ -16,38 +18,36 @@ export async function getServerSideProps(context) {
 
   return {
     props: {
-      allExperiences,
+      all: all,
     },
   };
 }
 
-const Blog = ({ allExperiences }) => {
+const Blog = ({ all }) => {
   return (
     <Layout>
-      {allExperiences.map((experience) => (
-        <section className={styles.blog__entry} key={experience.id}>
+      {all.map((article) => (
+        <section className={styles.blog__entry} key={article.id}>
           <div className={styles.blog__image}>
-            <Link href="/blog/1">
+            <Link href={`blog/${article.slug}`}>
               <Image
-                src={"/images/rional_messi.jpg"}
+                src={getStrapiMedia(article.image)}
                 width={400}
                 height={400}
               ></Image>
             </Link>
           </div>
           <div className={styles.blog__info}>
-            <Link href="/blog/1">
-              <h2>It’s Latin — Sorta</h2>
+            <Link href={`blog/${article.slug}`}>
+              <h2>{article.title}</h2>
             </Link>
             <div className={styles.blog__experience}>
-              <p className={styles.blog__date}>24.10.1993</p>
-              <p className={styles.blog__place}>{experience.restaurant.Name}</p>
+              <p className={styles.blog__date}>
+                <Moment format="MMM Do YYYY">{article.published_at}</Moment>
+              </p>
+              <p>{article.slug}</p>
             </div>
-            <p>
-              One thing that no one questions is that Lerem Ipsum is based upon
-              Latin. What’s more, that Latin dates back to 45 BCE in Cicero’s
-              first book of De...
-            </p>
+            <p>{article.description}</p>
           </div>
         </section>
       ))}

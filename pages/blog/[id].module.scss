@@ -1,6 +1,6 @@
 .singleBlog {
   h1 {
-    font-size: 5rem;
+    font-size: 3rem;
     margin: 0;
   }
   .blog__experience {
@@ -37,6 +37,11 @@
     text-align: justify;
     margin: 15px 0;
     margin-bottom: 45px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 
   .gallery {
