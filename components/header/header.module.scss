@@ -2,6 +2,10 @@
   padding: 15px 0;
   border-bottom: 1px solid #ececec;
 
+  @media (max-width: 560px) {
+    padding: 5px 0;
+  }
+
   .headerContainer {
     width: 100%;
     align-items: center;
@@ -10,9 +14,27 @@
     display: flex;
     justify-content: space-between;
 
+    @media (max-width: 560px) {
+      display: block;
+    }
+
     .menu {
       > a {
         margin-left: 30px;
+      }
+
+      @media (max-width: 560px) {
+        display: flex;
+        justify-content: space-between;
+        margin: 15px 0;
+        > a {
+          margin: 0 !important;
+          padding: 5px 10px;
+          background-color: #707070;
+          color: #fff;
+          font-size: 0.8em;
+          text-transform: uppercase;
+        }
       }
     }
 
