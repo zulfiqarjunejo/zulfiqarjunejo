@@ -1,13 +1,15 @@
+import React from 'react';
+import { GetServerSideProps } from 'next';
 import Image from "next/image";
 import Link from "next/link";
 import Moment from "react-moment";
 
 import Layout from "../components/layout/layout";
 import { getAll } from "../services/blog.service";
-import styles from "./blog.module.scss";
+import styles from "../styles/blog.module.scss";
 import { getStrapiMedia } from "../lib/media";
 
-export async function getServerSideProps(context) {
+export const getServerSideProps: GetServerSideProps = async (context) => {
   const all = await getAll();
 
   if (!all) {
@@ -21,12 +23,16 @@ export async function getServerSideProps(context) {
       all: all,
     },
   };
+};
+
+interface IBlogProps {
+  all: any[];
 }
 
-const Blog = ({ all }) => {
+const Blog: React.FC<any> = ({ all }) => {
   return (
     <Layout>
-      {all.map((article) => (
+      {all.map((article: any) => (
         <section className={styles.blog__entry} key={article.id}>
           <div className={styles.blog__image}>
             <Link href={`blog/${article.slug}`}>

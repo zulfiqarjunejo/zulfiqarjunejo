@@ -1,3 +1,4 @@
+import React from 'react';
 import Head from "next/head";
 import styles from "./layout.module.scss";
 import Link from "next/link";
@@ -8,7 +9,11 @@ export const firstName = "Zulfiqar";
 export const lastName = "Ahmed";
 export const siteTitle = "Zulfiqar Ahmed";
 
-export default function Layout({ children, home }) {
+interface ILayoutProps {
+  home?: boolean;
+}
+
+const Layout: React.FC<any> = ({ children, home }) => {
   return (
     <div className={styles.appLayout}>
       <div className="container mx-auto">
@@ -45,4 +50,6 @@ export default function Layout({ children, home }) {
       </div>
     </div>
   );
-}
+};
+
+export default Layout;

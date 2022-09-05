@@ -1,3 +1,4 @@
+import React from 'react';
 import Image from "next/image";
 import Moment from "react-moment";
 import ReactMarkdown from "react-markdown";
@@ -6,8 +7,9 @@ import Layout from "../../components/layout/layout";
 import styles from "./[id].module.scss";
 import { getOne } from "../../services/blog.service";
 import { getStrapiMedia } from "../../lib/media";
+import { GetServerSideProps } from "next";
 
-export async function getServerSideProps(context) {
+export const getServerSideProps: GetServerSideProps = async (context) => {
   const one = await getOne(context.query.id);
 
   if (!one) {
@@ -21,9 +23,13 @@ export async function getServerSideProps(context) {
       one,
     },
   };
+};
+
+interface IBlog {
+  one: any;
 }
 
-const Blog = ({ one }) => {
+const Blog: React.FC<any> = ({ one }) => {
   return (
     <Layout>
       <div className={styles.singleBlog}>
@@ -42,7 +48,9 @@ const Blog = ({ one }) => {
         </div>
         <div className={styles.singleIngfo}>
           <p> {one.description} </p>
-          <ReactMarkdown children={one.content} escapeHtml={false} />
+          <ReactMarkdown>
+            {one.content}
+          </ReactMarkdown>
         </div>
 
         {/* <div className={styles.gallery}>
