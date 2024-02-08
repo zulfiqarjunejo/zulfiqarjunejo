@@ -4,11 +4,10 @@
 
 ### About
 
-- **Tech Stack :** Golang, Node.JS, JavaScript, Java/Kotlin
-- **Learning :** Full-Stack Development :zap: | Open-Source :fire:
-- **Hobbies :** Articles & Music :headphones:
-- **Fact :** First solve the problem, then write the code :heart:
-- **Organization :**
+- **Tech Stack :** Golang, Node.JS, JavaScript, Java/Kotlin, Docker, Kubernetes
+- **Learning :** System Design & Architecture :zap: | Open-Source :fire:
+- **Hobbies :** Reading Tech Blogs & Music :headphones:
+- **Fact:** First solve the problem, then write the code :heart:
 
 ---
 
