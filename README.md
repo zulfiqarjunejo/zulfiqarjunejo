@@ -1,6 +1,5 @@
 # About Me:
 💫 Hi, I'm Zulfiqar Ahmed, Senior Software Engineer from Germany. <br>
-👯 I’m looking to collaborate on Design Patterns for Rust.<br>
 🌱 I’m currently learning Embedded Programming.
 
 
